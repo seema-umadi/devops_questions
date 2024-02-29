@@ -37,4 +37,43 @@ Run the Ansible Tower setup script---> sudo ./setup.sh
     paste id_rsa.pub in nodes Authorized_key. Put private ip address of node which is present on premises in inventry file. 
     
 7) Write a single playbook with global and local variables.
-    
+
+8) Write a script for the prompt variable.
+	Create a new file “input.sh” and write below script:
+#!/bin/bash
+ 
+echo "Enter Your Name: "
+read my_var
+echo "Welcome ${my_var}!"
+save file.
+then run command
+chmod +x input.sh
+./input.sh
+
+10) Write a playbook in which package install,start,enable,deployment, uninstall modules are present.
+
+
+
+12) Create a Directory and 3 files inside that directory with any content put into the script, when we run the script in output we have to show the output of all three files. This script has to run without execution permission.
+    create file and then vim file.sh
+	13)#!/bin/bash
+
+# Create a directory
+mkdir my_directory
+
+# Change into the created directory
+cd my_directory || exit
+
+# Create three files with content
+echo "Content for File 1" > file1.txt
+echo "Content for File 2" > file2.txt
+echo "Content for File 3" > file3.txt
+
+# Display the contents of all three files
+cat file1.txt
+cat file2.txt
+cat file3.txt
+
+Then, you can run the script using the bash command
+bash file.sh
+
