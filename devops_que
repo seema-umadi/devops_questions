@@ -50,9 +50,23 @@ then run command
 chmod +x input.sh
 ./input.sh
 
+9) Write a script for git  push where the commit message will be the same.
+vim task.sh
+	#!/bin/bash
+	touch file1
+	touch file2
+	COMMIT_MESSAGE="commit message"
+	git add .
+	git commit -m "$COMMIT_MESSAGE"
+	git push origin main
+save file. 
+Make the script executable by running the following command in the terminal:
+chmod +x task.sh
+Run the script by executing:
+./task.sh
+
+
 10) Write a playbook in which package install,start,enable,deployment, uninstall modules are present.
-
-
 
 12) Create a Directory and 3 files inside that directory with any content put into the script, when we run the script in output we have to show the output of all three files. This script has to run without execution permission.
     create file and then vim file.sh
